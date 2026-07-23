@@ -14,6 +14,18 @@
 		mode="year"
 		title="기다림은 전방위로 줄었다 — 그러나 균일하지 않다"
 		subtitle={'실제 연도 기준. 각 영역의 "보상까지 기다리는 시간"을 시작점 100으로 맞춤 (index100)'}
+		annotations={[
+			{
+				domain: "jobtenure",
+				year: 2014,
+				lines: ["유일하게 버텼다", "직장만은 서두를 수 없었다"],
+				dx: -140,
+				dy: 70,
+				w: 200,
+				tone: "accent",
+				sticky: true
+			}
+		]}
 	/>
 
 	<p class="note">
