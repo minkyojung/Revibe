@@ -4,7 +4,14 @@
 
 	// mode: "year" = 실제 연도 / "elapsed" = 시작 후 경과연수(출발선 정렬)
 	// annotations: 차트 위에 얹는 해설 [{ domain, year, lines[], dx, dy, anchor }]
-	let { mode = "year", title = "", subtitle = "", annotations = [] } = $props();
+	// highlightCounter: 반례선(직장)을 테라코타로 강조할지. 첫 그래프에선 false로 스포일러 방지
+	let {
+		mode = "year",
+		title = "",
+		subtitle = "",
+		annotations = [],
+		highlightCounter = true
+	} = $props();
 
 	const rows = raw.map((d) => ({ domain: d.domain, year: +d.year, index100: +d.index100 }));
 
@@ -89,14 +96,15 @@
 			<text class="axislabel" x={iw / 2} y={ih + 42} text-anchor="middle">{xAxisLabel}</text>
 
 			{#each series as s}
+				{@const emph = s.isCounter && highlightCounter}
 				<path
-					class="series {s.isCounter ? 'counter' : 'fall'}"
+					class="series {emph ? 'counter' : 'fall'}"
 					class:dim={hovered && hovered !== s.domain}
 					class:active={hovered === s.domain}
 					d={path(s.points)}
 				/>
 				<text
-					class="label {s.isCounter ? 'counter' : 'fall'}"
+					class="label {emph ? 'counter' : 'fall'}"
 					class:dim={hovered && hovered !== s.domain}
 					x={x(last(s).x) + 8}
 					y={y(last(s).y)}

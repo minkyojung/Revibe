@@ -29,19 +29,10 @@
 
 	<PatienceChart
 		mode="year"
+		highlightCounter={false}
 		title="기다림은 어디서나 짧아졌다"
 		subtitle="돈, 영화, 뉴스, 집중력. 종류는 다른데 방향은 똑같다 — 전부 아래로."
 		annotations={[
-			{
-				domain: "jobtenure",
-				year: 2014,
-				lines: ["유일하게 버텼다", "직장만은 서두를 수 없었다"],
-				dx: -140,
-				dy: 70,
-				w: 200,
-				tone: "accent",
-				sticky: true
-			},
 			{ domain: "stocks", year: 2020, lines: ["8년 → 5개월", "1960 → 2020"], dx: -170, dy: -150, w: 150 },
 			{ domain: "film_asl", year: 2010, lines: ["12초 → 2.5초", "1930 → 2010"], dx: -160, dy: -95, w: 150 },
 			{ domain: "soundbite", year: 2000, lines: ["43초 → 8초", "1968 → 2000"], dx: -60, dy: 40, w: 150 },
@@ -58,6 +49,18 @@
 		mode="elapsed"
 		title="같은 출발선에 세워보면"
 		subtitle="모두를 0년에서 다시 출발시켰다. 이제 선이 가파를수록 빨리 무너진 것이다."
+		annotations={[
+			{
+				domain: "jobtenure",
+				year: 2014,
+				lines: ["유일하게 버텼다", "직장만은 서두를 수 없었다"],
+				dx: -90,
+				dy: 90,
+				w: 200,
+				tone: "accent",
+				sticky: true
+			}
+		]}
 	/>
 
 	<p class="turn">그런데 딱 하나, 거의 그대로인 선이 있다.</p>
