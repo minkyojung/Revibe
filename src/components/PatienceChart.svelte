@@ -91,33 +91,42 @@
 
 <style>
 	.chart {
-		margin: 1.5rem auto;
+		margin: 2rem auto;
 		max-width: 900px;
 	}
+	/* 제목·부제 = 한글 명조 */
 	.title {
-		font-size: 1.25rem;
-		margin: 0 0 0.25rem;
+		font-family: var(--font-serif);
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 1.35;
+		letter-spacing: -0.01em;
+		color: var(--revibe-ink);
+		margin: 0 0 0.35rem;
 	}
 	.subtitle {
-		margin: 0 0 0.75rem;
-		color: #666;
-		font-size: 0.9rem;
+		font-family: var(--font-serif);
+		font-weight: 400;
+		margin: 0 0 1.25rem;
+		color: var(--revibe-ink-soft);
+		font-size: 0.95rem;
+		line-height: 1.5;
 	}
 	svg {
 		width: 100%;
 		height: auto;
 		overflow: visible;
 	}
+	/* 헤어라인 격자 */
 	.grid {
-		stroke: #e6e6e6;
+		stroke: var(--revibe-hairline);
 		stroke-width: 1;
 	}
-	.tick {
-		fill: #999;
-		font-size: 12px;
-	}
+	/* 축 눈금·라벨 = 산세리프 */
+	.tick,
 	.axislabel {
-		fill: #999;
+		font-family: var(--font-sans);
+		fill: var(--revibe-ink-soft);
 		font-size: 12px;
 	}
 	.series {
@@ -125,22 +134,26 @@
 		stroke-linejoin: round;
 		stroke-linecap: round;
 	}
+	/* 급락 4선: 조용한 웜 그레이, 가늘게 */
 	.series.fall {
-		stroke: #9aa5b1;
-		stroke-width: 2;
+		stroke: var(--revibe-fall);
+		stroke-width: 1.5;
 	}
+	/* 반례선: 벽돌 적색, 굵게 */
 	.series.counter {
-		stroke: #e8590c;
-		stroke-width: 3.5;
+		stroke: var(--revibe-accent);
+		stroke-width: 3;
 	}
+	/* 선 끝 라벨 = 산세리프 */
 	.label {
+		font-family: var(--font-sans);
 		font-size: 13px;
 	}
 	.label.fall {
-		fill: #6b7480;
+		fill: var(--revibe-ink-soft);
 	}
 	.label.counter {
-		fill: #e8590c;
+		fill: var(--revibe-accent);
 		font-weight: 700;
 	}
 </style>

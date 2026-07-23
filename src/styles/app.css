@@ -6,10 +6,19 @@
 
 /* colors defined in variables.css */
 :root {
-	/* font */
-	--font-sans: "Atlas Grotesk", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	--font-serif: "Tiempos Text", Iowan Old Style, Times New Roman, Times, serif;
+	/* font — Revibe: 한글 명조 제목 / 산세리프 라벨 */
+	--font-sans: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Helvetica, Arial,
+		sans-serif;
+	--font-serif: "Noto Serif KR", Batang, "Apple SD Gothic Neo", serif;
 	--font-mono: Menlo, Consolas, Monaco, monospace;
+
+	/* Revibe 디자인 토큰 (NYT 한국어판 톤) */
+	--revibe-bg: #faf9f7; /* 따뜻한 화이트 */
+	--revibe-ink: #1a1a1a; /* 본문 먹빛 */
+	--revibe-ink-soft: #6b6862; /* 보조 텍스트 */
+	--revibe-hairline: #e6e4df; /* 격자·헤어라인 */
+	--revibe-fall: #b0aea8; /* 급락 4선 (웜 그레이) */
+	--revibe-accent: #b85c38; /* 반례선 (테라코타 — 주황빛, 절제) — 유일한 포인트 */
 
 	/* z-index */
 	--z-bottom: -1;
@@ -27,9 +36,9 @@
 	--radius-md: 0.5rem;
 	--radius-lg: 1rem;
 	
-	--color-bg: var(--color-white);
-	--color-fg: var(--color-gray-900);
-	--color-fg-light: var(--color-gray-500);
+	--color-bg: var(--revibe-bg);
+	--color-fg: var(--revibe-ink);
+	--color-fg-light: var(--revibe-ink-soft);
 	--color-primary: var(--color-black);
 	--color-link: var(--color-black);
 	--color-link-hover: var(--color-black);

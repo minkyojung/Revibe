@@ -1,26 +1,13 @@
 <script>
-	import { setContext } from "svelte";
-	import { browser } from "$app/environment";
 	import Meta from "$components/Meta.svelte";
 	import PatienceChart from "$components/PatienceChart.svelte";
 	import copy from "$data/copy.json";
 	import "$utils/version.js";
 
-	let { data } = $props();
-
-	const preloadFont = [
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2",
-		"https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
-		"https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2"
-	];
-
 	const { title, description, url, keywords } = copy;
-	setContext("copy", copy);
-	setContext("data", data);
 </script>
 
-<Meta {title} {description} {url} {preloadFont} {keywords} />
+<Meta {title} {description} {url} {keywords} />
 
 <div class="essay">
 	<PatienceChart
@@ -45,16 +32,21 @@
 <style>
 	.essay {
 		max-width: 900px;
-		margin: 2rem auto;
-		padding: 0 1rem;
+		margin: 3.5rem auto;
+		padding: 0 1.25rem;
 	}
+	/* 주석 문단 = 한글 명조, 좁은 폭, 벽돌 적색 헤어라인 */
 	.note {
-		max-width: 640px;
-		margin: 1rem auto 2.5rem;
-		color: #444;
-		line-height: 1.6;
-		font-size: 0.95rem;
-		border-left: 3px solid #e8590c;
-		padding-left: 1rem;
+		font-family: var(--font-serif);
+		max-width: 620px;
+		margin: 1.5rem auto 3.5rem;
+		color: var(--revibe-ink);
+		line-height: 1.8;
+		font-size: 1rem;
+		border-left: 2px solid var(--revibe-accent);
+		padding-left: 1.15rem;
+	}
+	.note :global(strong) {
+		font-weight: 600;
 	}
 </style>
