@@ -1,0 +1,22 @@
+domain,year,raw_value,unit,index100,source_note
+stocks,1960,100,months,100,NYSE avg holding period (TopForeignStocks/Reuters)
+stocks,1970,63,months,63,
+stocks,1980,33,months,33,
+stocks,1990,26,months,26,
+stocks,2000,14,months,14,
+stocks,2010,6,months,6,
+stocks,2020,5.5,months,5.5,
+film_asl,1930,12,seconds,100,Cutting et al 2010 (Psych Science) / Cinemetrics
+film_asl,1960,9,seconds,75,approx 8-10s
+film_asl,1980,5,seconds,41.7,
+film_asl,2005,2.75,seconds,22.9,approx 2.5-3s
+film_asl,2010,2.5,seconds,20.8,일부 영화 1.7s
+soundbite,1968,43,seconds,100,Hallin 1992 (J. of Communication)
+soundbite,1988,9,seconds,20.9,
+soundbite,2000,7.8,seconds,18.1,Farnsworth/Lichter 확장(근사)
+attention,2004,150,seconds,100,Gloria Mark UC Irvine (screen dwell)
+attention,2012,75,seconds,50,
+attention,2020,47,seconds,31.3,5개 독립연구 재확인(44~50s)
+jobtenure,1983,5.0,years,100,BLS/EBRI median tenure (반례)
+jobtenure,2014,4.6,years,92,
+jobtenure,2024,3.9,years,78,
